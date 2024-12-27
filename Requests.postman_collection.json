@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "8e768aff-aeb2-4234-8e63-3e4ddf37a920",
+		"name": "Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39549952"
+	},
+	"item": [
+		{
+			"name": "Login_admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token_admin\", \"token\");\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "syuztav123",
+						"username": "syuztav"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{URL}}login/api"
+			},
+			"response": []
+		},
+		{
+			"name": "Add_fundamental",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"course_id\", \"id\");\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "syuztav123",
+						"username": "syuztav"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"SScourse\",\r\n  \"body\": \"Here is a new course.\",\r\n  \"coursetype\": \"1\",\r\n  \"author\": \"syuztav\",\r\n  \"price\": 19\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{URL}}add_course/api"
+			},
+			"response": []
+		},
+		{
+			"name": "Set_discount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token_admin}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"course_type\": \"1\",\r\n  \"discount\": 50,\r\n  \"course_count\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{URL}}set_discount/api"
+			},
+			"response": []
+		},
+		{
+			"name": "Login_non-admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "idke",
+						"password": "syuztav123"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{URL}}login/api"
+			},
+			"response": []
+		},
+		{
+			"name": "Buy_course",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "idke",
+						"password": "syuztav123"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{URL}}buy_course/api/2834/idke"
+			},
+			"response": []
+		}
+	]
+}
