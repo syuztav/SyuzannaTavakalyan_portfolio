@@ -1,0 +1,64 @@
+Check the Discount changes' appearance						
+ID: TA-01
+Title: Check the Discount change appearance in the DB
+Preconditions: "Log in as an admin user (ex. syuztav/syuztav123) 
+Access the DB
+Priority: High
+STR: "1.Navigate to the “User_Action” page.
+  “Change Role” and “Change Discount” buttons are available.
+2. Enter valid data (integers) in the input fields, choose the ""Course type"" and click on the “Change Discount” button
+  "Discount changes" message is shown.
+3. Navigate to qwallity_db and select the course_discount table
+The course_discount table is displayed and new changes are applied
+Status: Success
+			
+ID: TA-02
+Title: Check the Discount change appearance in the qualified Course's description
+Preconditons: Log in as an admin user (ex. syuztav/syuztav123) 
+Priority: High
+STR:"1.Navigate to the “User_Action” page.
+  “Change Role” and “Change Discount” buttons are available.
+2. Enter valid data (integers) in the input fields, choose the "Course type" and click on the “Change Discount” button
+  "Discount changes" message is shown.
+3. Log in as a non-admin user (ex. idke/syuztav123) 
+   Homepage is displayed
+4. Navigate to the ‘Courses page’
+  "Fundamental" and "Advanced" buttons are shown
+5. Select the early changed course type
+    The course list is displayed
+6. As per conditions of the current discount for the chosen course type buy as much courses as needed
+  "You have 50 discount. Discounted price is displayed." message is shown in the opened course's page 
+Status: Fail.
+Note: Failed the 6th step, as the message was shown for any courses despite the conditions
+"
+Check “discount” and “course_count” input fields’ validation						
+ID:	TV-01
+Title:	Check “discount” and “course_count”  input fields’ validation for integers 
+Preconditons: Log in as an admin user (ex. syuztav/syuztav123)	
+Priority: High		
+STR:	1. Navigate to the “User_Action” page.
+    “Change Role” and “Change Discount” buttons are available.
+2. Input integers in the input fields and click on the “Change Discount” button
+    "Discount changes’ message is shown."	
+Status: Success
+
+ID:	TV-02
+Title: Check “discount” and “course_count”  input fields’ validation for strings 
+Preconditons: Log in as an admin user (ex. syuztav/syuztav123)
+Priority: Low		
+STR:	1.Navigate to the “User_Action” page.
+       “Change Role” and “Change Discount” buttons are available.
+2. Input characters/symbols in the input fields and click on the “Change Discount” button.
+      An error message is shown.
+Status: Fail
+  
+ID: TV-03	
+Title: Check “discount” and “course_count”  input fields’ validation in case of empty
+Preconditons: Log in as an admin user (ex. syuztav/syuztav123)	
+Priority:Low	
+STR: 1.Navigate to the “User_Action” page.
+    “Change Role” and “Change Discount” buttons are available.
+2.Leave the input fields blank and click on the “Change Discount” button
+    An error message is shown.
+Status: Fail
+						
