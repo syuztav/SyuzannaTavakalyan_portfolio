@@ -1,0 +1,105 @@
+Title: The new discount is shown for all courses despite the conditions
+Bug number: QW-01
+Summary:
+STR:
+Check the current discount settings from DB
+Log in as a non-admin user (ex. idke/syuztav123)
+Navigate to the ‘Courses page’, select any course type
+Click on the ‘Buy’ of any course and observe the result
+AR: The new discount is shown for all courses despite the conditions
+ER: The new discount should be shown depending on the conditions
+Env: Windows 11; Chrome Version 127.0.6533.100; Dev
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: Mid
+Priority: High
+
+Title: ‘Discount displayed' message persists after purchasing a course and navigating to 'MyCourses' page.
+Bug number: QW-02
+Summary: After buying a course with discounted price, the system leads to the ‘MyCourses’ page, where the ‘You have 50 discount. Discounted price is displayed.’ message doesn’t disappear 
+STR:
+Check the current discount settings from DB
+Log in as a non-admin user (ex. idke/syuztav123)
+Navigate to the ‘Courses’ page
+Buy a discounted course
+Observe the result
+AR:‘Discount displayed' message persists after purchasing a course and navigating to 'MyCourses' page.
+ER:  ‘Discount displayed’ message should disappear after purchasing a course and navigating to 'MyCourses' page.
+Env: Windows 11; Chrome Version 127.0.6533.100; Dev
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: Mid
+Priority: High
+
+Title: 302 Error is shown after viewing an already bought course 
+Bug number: QW-03
+Summary:
+STR:
+Log in as a non-admin user (ex. idke/syuztav123)
+Navigate to the ‘MyCourses’ page
+Click on any course title from the list
+Observe the result
+AR: Error is shown after clicking on an already bought course title
+ER: Course description should be shown after clicking on an already bought course title
+Env: Windows 11; Chrome Version 127.0.6533.100; Dev
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: High
+Priority: High
+
+Title: 302 Error is shown after viewing an already bought course 
+Bug number: QW-03
+Summary:
+STR:
+Log in as a non-admin user (ex. idke/syuztav123)
+Navigate to the ‘MyCourses’ page
+Click on any course title from the list
+Observe the result
+AR: Error is shown after clicking on an already bought course title
+ER: Course description should be shown after clicking on an already bought course title
+Env: Windows 11; Chrome Version 127.0.6533.100; Dev
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: High
+Priority: High
+
+Title: The system allows using characters besides numbers
+Bug number: QW-04
+Summary:
+STR:
+Log in as an admin/ non-admin user (ex. syuztav/syuztav123)
+Navigate to the ‘User_Action’ page
+Click on the ‘Change Discount’ button
+Input characters in both input fields
+Observe the result
+AR: The system allows using characters
+ER: The system allows using only numbers.
+Env: Windows 11; Chrome Version 127.0.6533.100; Dev
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: Mid
+Priority: High
+
+Title: The discount is successfully changed when leaving ‘discount’ and/or ‘course_count’ input fields empty
+Bug number: QW-05
+Summary:
+STR:
+Log in as an admin user (ex. syuztav/syuztav123)
+Navigate to the ‘User_Action’ page
+Click on the ‘Change Discount’ button
+Fill only one of the fields or leave both blank and click on the ‘Change Discount’ button 
+Observe the result
+AR: No credentials validation for ‘discount’ and ‘course_count’ input fields
+ER: The system should not change discount without inputting credentials
+Env: Windows 11; Chrome Version 127.0.6533.100; Exam
+Device: HP Victus Gaming Laptop
+Found in sprint: 1.1.19
+Reporter: Syuzanna Tavakalyan
+Severity: Mid
+Priority: Low
+
